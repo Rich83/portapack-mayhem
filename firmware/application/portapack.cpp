@@ -398,7 +398,7 @@ static void shutdown_base() {
  * everything else = IRC
  */
 
-bool init() {
+//bool init() {
 	set_idivc_base_clocks(cgu::CLK_SEL::IDIVC);
 
 	i2c0.start(i2c_config_boot_clock);
@@ -486,7 +486,7 @@ bool init() {
 
 	if( !portapack::cpld::update_if_necessary(portapack_cpld_config()) ) {
 		chThdSleepMilliseconds(10);
-		// If using a "2021/12 QFP100", press and hold the left button while booting. Should only need to do once.
+		 If using a "2021/12 QFP100", press and hold the left button while booting. Should only need to do once.
 		if (load_config() != 3 && load_config() != 4){
 			shutdown_base();
 			return false;
